@@ -19,7 +19,7 @@ const COLORES = {
 const DATOS_LUGARES = {
   iglesia: {
     categoria: "Ceremonia religiosa",
-    nombre: "Parroquia de San José",
+    nombre: "Parroquia de San Francisco de Asís",
     imagen: "/iglesia.jpg",
 
     // Movimiento de la imagen
@@ -29,7 +29,7 @@ const DATOS_LUGARES = {
 
   salon: {
     categoria: "Recepción",
-    nombre: "Salón Jardín La Toscana",
+    nombre: "Jardín Hermon",
     imagen: "/salon.jpg",
 
     // Movimiento de la imagen

@@ -1231,39 +1231,7 @@ export default function Portada() {
           }}
         />
 
-        {/* OVERLAY */}
 
-        <motion.div
-          className="
-            portada-xv__overlay
-            absolute inset-0
-            bg-black/35
-          "
-          initial={{ opacity: 0 }}
-          animate={
-            mostrarContenido
-              ? { opacity: 1 }
-              : { opacity: 0 }
-          }
-          transition={{
-            duration: 1.2,
-          }}
-        />
-
-        {/* OSCURECIMIENTO INFERIOR */}
-
-        <div
-          className="
-            portada-xv__sombra-inferior
-            pointer-events-none
-            absolute inset-x-0
-            bottom-0 h-[62%]
-          "
-          style={{
-            background:
-              "linear-gradient(to top, rgba(31,31,31,0.82), transparent)",
-          }}
-        />
 
         {/* CONTENIDO */}
 
