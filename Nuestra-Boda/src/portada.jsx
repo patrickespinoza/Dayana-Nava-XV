@@ -1411,7 +1411,7 @@ export default function Portada() {
             <p
               className="
                 mb-3
-                text-[9px]
+                text-[10px]
                 font-medium uppercase
                 tracking-[0.25em]
                 text-white
