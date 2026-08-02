@@ -8,7 +8,6 @@ import { motion } from "framer-motion";
 
 const DATOS_LLUVIA_SOBRES = {
   titulo: "Lluvia de sobres",
-  etiqueta: "Un detalle especial",
   mensaje:
     "Tu presencia será el mejor regalo para este día tan especial. Pero si deseas obsequiarme un detalle, una lluvia de sobres será recibida con mucho cariño y gratitud.",
 };
@@ -165,23 +164,6 @@ const LluviaDeSobres = () => {
       />
 
 
-      <div
-        aria-hidden="true"
-        className="
-          lluvia-sobres__linea-izquierda
-          pointer-events-none
-          absolute
-          left-6
-          top-1/2
-          hidden
-          h-52
-          w-px
-          -translate-y-1/2
-          bg-[#1F1F1F]/35
-          sm:block
-          lg:left-12
-        "
-      />
 
       <div
         aria-hidden="true"
@@ -293,21 +275,7 @@ const LluviaDeSobres = () => {
             "
           />
 
-          {/* Franja negra superior */}
-
-          <div
-            aria-hidden="true"
-            className="
-              pointer-events-none
-              absolute
-              right-0
-              top-0
-              h-3
-              w-[38%]
-              bg-[#1F1F1F]
-              sm:h-4
-            "
-          />
+ 
 
           {/* Diagonal azul inferior */}
 
@@ -387,69 +355,6 @@ const LluviaDeSobres = () => {
               max-w-3xl
             "
           >
-            {/* Etiqueta */}
-
-            <motion.div
-              className="
-                flex
-                items-center
-                justify-center
-                gap-3
-                sm:gap-5
-              "
-              variants={aparecerArriba}
-            >
-              <span
-                className="
-                  h-px
-                  w-10
-                  bg-[#1F1F1F]/45
-                  sm:w-20
-                "
-              />
-
-              <span
-                className="
-                  h-3
-                  w-3
-                  rotate-45
-                  bg-[#D99AB1]
-                "
-              />
-
-              <p
-                className="
-                  whitespace-nowrap
-                  text-[9px]
-                  font-semibold
-                  uppercase
-                  tracking-[0.28em]
-                  text-[#1F1F1F]
-                  sm:text-[11px]
-                  sm:tracking-[0.44em]
-                "
-              >
-                {DATOS_LLUVIA_SOBRES.etiqueta}
-              </p>
-
-              <span
-                className="
-                  h-3
-                  w-3
-                  rotate-45
-                  bg-[#D99AB1]
-                "
-              />
-
-              <span
-                className="
-                  h-px
-                  w-10
-                  bg-[#1F1F1F]/45
-                  sm:w-20
-                "
-              />
-            </motion.div>
 
 
             {/* Título */}
@@ -508,14 +413,7 @@ const LluviaDeSobres = () => {
                 "
               />
 
-              <span
-                className="
-                  h-2
-                  w-2
-                  rotate-45
-                  bg-[#1F1F1F]
-                "
-              />
+
 
               <span
                 className="
@@ -563,38 +461,6 @@ const LluviaDeSobres = () => {
             </motion.p>
 
 
-
-            {/* Cierre */}
-
-            <motion.div
-              className="
-                mx-auto
-                mt-9
-                inline-flex
-                items-center
-                justify-center
-                border-y
-                border-[#1F1F1F]/20
-                bg-[#B9D8F4]/60
-                px-7
-                py-3
-              "
-              variants={aparecerAbajo}
-            >
-              <p
-                className="
-                  text-[9px]
-                  font-semibold
-                  uppercase
-                  tracking-[0.3em]
-                  text-[#1F1F1F]
-                  sm:text-[11px]
-                  sm:tracking-[0.44em]
-                "
-              >
-                Con amor y gratitud
-              </p>
-            </motion.div>
           </div>
 
           {/* Esquinas decorativas */}

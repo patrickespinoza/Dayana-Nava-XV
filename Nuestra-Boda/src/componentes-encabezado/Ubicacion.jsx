@@ -706,66 +706,7 @@ export default function EventoDireccion() {
           "
           variants={aparecerArriba}
         >
-          <div
-            className="
-              flex
-              items-center
-              justify-center
-              gap-3
-              sm:gap-5
-            "
-          >
-            <span
-              className="
-                h-px
-                w-10
-                bg-[#1F1F1F]/50
-                sm:w-20
-              "
-            />
 
-            <span
-              className="
-                h-3
-                w-3
-                rotate-45
-                bg-[#D99AB1]
-              "
-            />
-
-            <p
-              className="
-                whitespace-nowrap
-                text-[9px]
-                font-bold
-                uppercase
-                tracking-[0.3em]
-                text-[#1F1F1F]
-                sm:text-[11px]
-                sm:tracking-[0.48em]
-              "
-            >
-              Guarda la fecha
-            </p>
-
-            <span
-              className="
-                h-3
-                w-3
-                rotate-45
-                bg-[#D99AB1]
-              "
-            />
-
-            <span
-              className="
-                h-px
-                w-10
-                bg-[#1F1F1F]/50
-                sm:w-20
-              "
-            />
-          </div>
 
           <h2
             className="
@@ -779,7 +720,7 @@ export default function EventoDireccion() {
               lg:text-[96px]
             "
           >
-            Celebremos juntos
+            Save the Date
           </h2>
 
           <p
@@ -1066,82 +1007,6 @@ export default function EventoDireccion() {
           />
         </div>
 
-        {/* =================================================
-            MENSAJE FINAL
-        ================================================= */}
-
-        <motion.div
-          className="
-            evento-xv__mensaje
-            relative
-            mx-auto
-            mt-16
-            max-w-4xl
-            overflow-hidden
-            border-y
-            border-[#1F1F1F]/25
-            bg-white/30
-            px-6
-            py-11
-            text-center
-            backdrop-blur-sm
-            sm:mt-20
-            sm:px-10
-            sm:py-14
-          "
-          variants={aparecerArriba}
-        >
-          <div
-            className="
-              mx-auto
-              mb-7
-              flex
-              items-center
-              justify-center
-              gap-4
-            "
-          >
-            <span
-              className="
-                h-px
-                w-16
-                bg-[#1F1F1F]/45
-                sm:w-24
-              "
-            />
-
-            <span
-              className="
-                h-3
-                w-3
-                rotate-45
-                bg-[#D99AB1]
-              "
-            />
-
-            <span
-              className="
-                h-px
-                w-16
-                bg-[#1F1F1F]/45
-                sm:w-24
-              "
-            />
-          </div>
-
-          <p
-            className="
-              font-cursiveDancing
-              text-[32px]
-              leading-relaxed
-              text-[#1F1F1F]
-              sm:text-[42px]
-            "
-          >
-            Tu presencia hará de este día un recuerdo
-            aún más especial.
-          </p>
-        </motion.div>
       </div>
 
       {/* Franjas inferiores */}

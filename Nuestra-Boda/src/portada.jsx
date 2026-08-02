@@ -256,26 +256,30 @@ export default function Portada() {
     setExperienciaIniciada(true);
     setAbrirSobre(true);
 
-    temporizadorRef.current = setTimeout(
-      async () => {
-        if (audioRef.current) {
-          audioRef.current.volume = 0.45;
+    /*
+      La reproducción debe comenzar directamente dentro del clic.
+      Si se intenta después de un setTimeout, algunos navegadores
+      móviles dejan de considerarla una acción del usuario y la bloquean.
+    */
+    if (audioRef.current) {
+      audioRef.current.volume = 0.45;
 
-          try {
-            await audioRef.current.play();
-          } catch (error) {
-            console.warn(
-              "El navegador bloqueó la reproducción del audio:",
-              error
-            );
-          }
-        }
+      const promesaReproduccion = audioRef.current.play();
 
-        setIntroActiva(false);
-        setMostrarContenido(true);
-      },
-      1750
-    );
+      if (promesaReproduccion !== undefined) {
+        promesaReproduccion.catch((error) => {
+          console.warn(
+            "El navegador bloqueó la reproducción del audio:",
+            error
+          );
+        });
+      }
+    }
+
+    temporizadorRef.current = window.setTimeout(() => {
+      setIntroActiva(false);
+      setMostrarContenido(true);
+    }, 1750);
   };
 
   const textoLugares =
@@ -301,7 +305,7 @@ export default function Portada() {
           AUDIO DE FONDO
       =============================================== */}
 
-      <audio ref={audioRef} loop preload="auto">
+      <audio ref={audioRef} loop preload="auto" playsInline>
         <source
           src={DATOS_XV.cancion}
           type="audio/mpeg"
@@ -414,10 +418,12 @@ export default function Portada() {
                 relative z-10
                 flex min-h-[100dvh]
                 w-full flex-col
-                items-center justify-center
-                px-4 py-10
+                items-center justify-start
+                px-4 pb-10 pt-7
                 text-center
-                sm:px-6 sm:py-14
+                sm:px-6 sm:pb-12 sm:pt-10
+                md:justify-center
+                md:py-14
                 lg:px-10 lg:py-16
               "
             >
@@ -426,9 +432,9 @@ export default function Portada() {
               <motion.div
                 className="
                   portada-xv__encabezado
-                  relative mb-8
+                  relative mb-5
                   w-full max-w-3xl
-                  sm:mb-10
+                  sm:mb-8
                 "
                 initial={{
                   opacity: 0,
@@ -445,7 +451,7 @@ export default function Portada() {
                 <div
                   className="
                     portada-xv__etiqueta
-                    mb-4 flex
+                    mb-3 flex
                     items-center justify-center
                     gap-3 sm:gap-5
                   "
@@ -465,7 +471,7 @@ export default function Portada() {
                       uppercase
                       tracking-[0.32em]
                       text-[#1F1F1F]
-                      sm:text-[11px]
+                      sm:text-[12px]
                       sm:tracking-[0.5em]
                     "
                   >
@@ -505,7 +511,7 @@ export default function Portada() {
                 <p
                   className="
                     portada-xv__subtitulo
-                    mt-3
+                    mt-2
                     font-serif
                     text-[12px] italic
                     tracking-[0.1em]
@@ -521,14 +527,14 @@ export default function Portada() {
                 <div
                   className="
                     portada-xv__fecha
-                    mt-5 flex
+                    mt-4 flex
                     flex-col items-center
-                    sm:mt-6
+                    sm:mt-5
                   "
                 >
                   <div
                     className="
-                      mb-4 h-px w-24
+                      mb-3 h-px w-24
                       bg-[#D99AB1]
                       sm:w-32
                     "
@@ -561,14 +567,15 @@ export default function Portada() {
                 className="
                   portada-xv__sobre
                   group relative block
-                  w-[88vw]
-                  max-w-[350px]
+                  w-[84vw]
+                  max-w-[325px]
                   cursor-pointer
                   border-0
                   bg-transparent p-0
                   outline-none
                   disabled:cursor-default
                   sm:w-[350px]
+                  sm:max-w-[350px]
                   md:max-w-[390px]
                 "
                 style={{
@@ -788,13 +795,13 @@ export default function Portada() {
                     className="
                       whitespace-nowrap
                       text-center
-                      text-[7px]
+                      text-[9px]
                       font-medium
                       uppercase
-                      tracking-[0.23em]
+                      tracking-[0.18em]
                       text-[#1F1F1F]
-                      sm:text-[10px]
-                      sm:tracking-[0.38em]
+                      sm:text-[12px]
+                      sm:tracking-[0.32em]
                     "
                   >
                     INVITACIÓN ESPECIAL
@@ -810,12 +817,12 @@ export default function Portada() {
                       className="
                         mb-0.5
                         font-serif
-                        text-[9px]
+                        text-[10px]
                         uppercase
                         tracking-[0.2em]
                         text-[#D99AB1]
                         sm:mb-1
-                        sm:text-[11px]
+                        sm:text-[12px]
                       "
                     >
                       MIS XV AÑOS
@@ -827,10 +834,10 @@ export default function Portada() {
                         break-words
                         text-center
                         font-cursiveDancing
-                        text-[25px]
-                        leading-none
+                        text-[28px]
+                        leading-[0.95]
                         text-[#1F1F1F]
-                        sm:text-[34px]
+                        sm:text-[36px]
                       "
                     >
                       {DATOS_XV.nombre}
@@ -841,13 +848,13 @@ export default function Portada() {
                     className="
                       whitespace-nowrap
                       text-center
-                      text-[7px]
+                      text-[9px]
                       font-medium
                       uppercase
-                      tracking-[0.15em]
+                      tracking-[0.14em]
                       text-[#1F1F1F]
-                      sm:text-[9px]
-                      sm:tracking-[0.25em]
+                      sm:text-[11px]
+                      sm:tracking-[0.22em]
                     "
                   >
                     TOCA PARA ABRIR
@@ -966,7 +973,7 @@ export default function Portada() {
                 >
                   <p
                     className="
-                      text-[8px]
+                      text-[10px]
                       font-medium
                       uppercase
                       tracking-[0.28em]
@@ -987,10 +994,10 @@ export default function Portada() {
               <motion.div
                 className="
                   portada-xv__pases
-                  mt-9 flex
+                  mt-6 flex
                   w-full max-w-lg
                   flex-col items-center
-                  sm:mt-12
+                  sm:mt-9
                 "
                 initial={{
                   opacity: 0,
@@ -1015,7 +1022,7 @@ export default function Portada() {
 
                 <p
                   className="
-                    text-[9px]
+                    text-[10px]
                     font-medium uppercase
                     tracking-[0.32em]
                     text-[#1F1F1F]
@@ -1046,11 +1053,11 @@ export default function Portada() {
                     className="
                       relative
                       font-light
-                      text-[52px]
+                      text-[48px]
                       leading-none
                       text-[#D99AB1]
-                      sm:text-[64px]
-                      md:text-[72px]
+                      sm:text-[60px]
+                      md:text-[68px]
                     "
                     style={{
                       textShadow:
@@ -1064,7 +1071,7 @@ export default function Portada() {
                 <p
                   className="
                     px-3 text-center
-                    text-[9px]
+                    text-[10px]
                     font-medium uppercase
                     tracking-[0.26em]
                     text-[#1F1F1F]
@@ -1077,7 +1084,7 @@ export default function Portada() {
 
                 <div
                   className="
-                    my-4 h-px w-16
+                    my-3 h-px w-16
                     bg-[#D99AB1]
                     sm:my-5
                   "
@@ -1107,11 +1114,11 @@ export default function Portada() {
                     className="
                       break-words
                       text-center
-                      text-[10px]
-                      tracking-[0.08em]
+                      text-[12px]
+                      tracking-[0.04em]
                       text-[#1F1F1F]
-                      sm:text-[12px]
-                      sm:tracking-[0.14em]
+                      sm:text-[13px]
+                      sm:tracking-[0.08em]
                     "
                   >
                     Invitación para:

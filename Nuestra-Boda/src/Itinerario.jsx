@@ -22,7 +22,7 @@ const EVENTOS = [
     hora: "16:00 Hrs",
     titulo: "Misa",
     descripcion:
-      "Ceremonia religiosa para agradecer a Dios por la vida de Dayana y pedir su bendición en esta nueva etapa.",
+      "Ceremonia religiosa",
     simbolo: "✦",
     variante: "rosa",
   },
@@ -30,7 +30,7 @@ const EVENTOS = [
     hora: "17:30 Hrs",
     titulo: "Recepción",
     descripcion:
-      "Bienvenida a familiares y amigos para dar inicio a una celebración llena de alegría y momentos especiales.",
+      "Bienvenida a familiares y amigos para dar inicio a una celebración",
     simbolo: "✧",
     variante: "azul",
   },
@@ -46,7 +46,7 @@ const EVENTOS = [
     hora: "19:15 Hrs",
     titulo: "Brindis",
     descripcion:
-      "Levantaremos nuestras copas para celebrar los XV años de Dayana y desearle una vida llena de sueños cumplidos.",
+      "Levantaremos nuestras copas para celebrar los XV años de Dayana.",
     simbolo: "♡",
     variante: "azul",
   },
@@ -54,7 +54,7 @@ const EVENTOS = [
     hora: "20:10 Hrs",
     titulo: "Baile sorpresa",
     descripcion:
-      "Dayana presentará un baile especial preparado con mucha emoción para sorprender a todos sus invitados.",
+      "Dayana presentará un baile especial.",
     simbolo: "✦",
     variante: "rosa",
   },
@@ -62,7 +62,7 @@ const EVENTOS = [
     hora: "20:30 Hrs",
     titulo: "Grupo musical",
     descripcion:
-      "La música en vivo llenará la noche de alegría para comenzar a bailar y disfrutar de la celebración.",
+      "Para comenzar a bailar y disfrutar de la celebración.",
     simbolo: "✧",
     variante: "azul",
   },
@@ -70,7 +70,7 @@ const EVENTOS = [
     hora: "22:40 Hrs",
     titulo: "DJ / Vatucada",
     descripcion:
-      "La fiesta continuará con DJ y batucada para llenar la pista de energía, ritmo y momentos inolvidables.",
+      "La fiesta continuará con DJ y Vatucada.",
     simbolo: "♡",
     variante: "rosa",
   },
@@ -86,7 +86,7 @@ const EVENTOS = [
     hora: "00:00 Hrs",
     titulo: "Fin",
     descripcion:
-      "Cerraremos esta hermosa celebración agradeciendo a todos por acompañarnos y ser parte de este día inolvidable.",
+      "Cerraremos esta hermosa celebración.",
     simbolo: "✧",
     variante: "rosa",
   },
@@ -710,66 +710,6 @@ const ItinerarioTimelinePremium = () => {
         "
         variants={aparecerArriba}
       >
-        <div
-          className="
-            flex
-            items-center
-            justify-center
-            gap-3
-            sm:gap-5
-          "
-        >
-          <span
-            className="
-              h-px
-              w-10
-              bg-[#1F1F1F]/55
-              sm:w-20
-            "
-          />
-
-          <span
-            className="
-              h-2
-              w-2
-              rotate-45
-              bg-white
-            "
-          />
-
-          <p
-            className="
-              whitespace-nowrap
-              text-[9px]
-              font-bold
-              uppercase
-              tracking-[0.32em]
-              text-[#1F1F1F]
-              sm:text-[11px]
-              sm:tracking-[0.48em]
-            "
-          >
-            Itinerario
-          </p>
-
-          <span
-            className="
-              h-2
-              w-2
-              rotate-45
-              bg-white
-            "
-          />
-
-          <span
-            className="
-              h-px
-              w-10
-              bg-[#1F1F1F]/55
-              sm:w-20
-            "
-          />
-        </div>
 
         <h2
           className="
@@ -783,7 +723,7 @@ const ItinerarioTimelinePremium = () => {
             lg:text-[95px]
           "
         >
-          Una noche inolvidable
+          Itinerario
         </h2>
 
         <div
@@ -836,23 +776,6 @@ const ItinerarioTimelinePremium = () => {
           />
         </div>
 
-        <p
-          className="
-            mx-auto
-            max-w-2xl
-            font-playfair
-            text-[15px]
-            leading-[1.85]
-            text-[#1F1F1F]/75
-            sm:text-[17px]
-            md:text-[18px]
-          "
-        >
-          Hemos preparado cada momento con mucha
-          ilusión. Acompáñame a disfrutar de una
-          celebración llena de alegría, emoción y
-          recuerdos especiales.
-        </p>
       </motion.div>
 
       {/* ===============================================
@@ -918,85 +841,6 @@ const ItinerarioTimelinePremium = () => {
           ))}
         </div>
       </div>
-
-      {/* ===============================================
-          MENSAJE FINAL
-      =============================================== */}
-
-      <motion.div
-        className="
-          itinerario-xv__mensaje
-          relative
-          z-10
-          mx-auto
-          mt-16
-          flex
-          max-w-3xl
-          flex-col
-          items-center
-          border-y
-          border-[#1F1F1F]/25
-          bg-white/25
-          px-6
-          py-10
-          text-center
-          backdrop-blur-sm
-          sm:mt-20
-          sm:px-10
-          md:mt-28
-        "
-        variants={aparecerArriba}
-      >
-        <div
-          className="
-            mb-6
-            flex
-            items-center
-            justify-center
-            gap-4
-          "
-        >
-          <span
-            className="
-              h-px
-              w-16
-              bg-[#1F1F1F]/45
-              sm:w-24
-            "
-          />
-
-          <span
-            className="
-              h-2.5
-              w-2.5
-              rotate-45
-              bg-[#D99AB1]
-            "
-          />
-
-          <span
-            className="
-              h-px
-              w-16
-              bg-[#1F1F1F]/45
-              sm:w-24
-            "
-          />
-        </div>
-
-        <p
-          className="
-            font-cursiveDancing
-            text-[31px]
-            leading-relaxed
-            text-[#1F1F1F]
-            sm:text-[39px]
-          "
-        >
-          Cada momento será aún más especial al
-          compartirlo contigo.
-        </p>
-      </motion.div>
 
       {/* Franjas inferiores */}
 

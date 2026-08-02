@@ -7,7 +7,7 @@ import EventoDireccion from "./componentes-encabezado/Ubicacion";
 import DressCodePremium from "./componentes-encabezado/codigovestimenta";
 import FrasePersonalizada from "./componentes-encabezado/FrasePer";
 import LugaresYFamilia from "./componentes-encabezado/Agradecimiento";
-import LluviaDeSobres from "./componentes-encabezado/LluviaDeSobres";
+import LluviaDeSobres from "./componentes-encabezado/LluviadeSobres";
 
 
 export default function PaginaPrincipal() {

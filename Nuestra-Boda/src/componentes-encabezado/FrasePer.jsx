@@ -484,20 +484,6 @@ const FrasePersonalizada = () => {
                 }}
               />
 
-              <p
-                className="
-                  whitespace-nowrap
-                  text-[9px]
-                  font-semibold
-                  uppercase
-                  tracking-[0.27em]
-                  text-[#1F1F1F]
-                  sm:text-[11px]
-                  sm:tracking-[0.44em]
-                "
-              >
-                Una celebración especial
-              </p>
 
               <motion.span
                 aria-hidden="true"
@@ -529,24 +515,6 @@ const FrasePersonalizada = () => {
                 "
               />
             </motion.div>
-
-            {/* Título */}
-
-            <motion.p
-              className="
-                frase-personalizada__titulo
-                mt-7
-                font-cursiveDancing
-                text-[42px]
-                leading-none
-                text-[#D99AB1]
-                sm:text-[56px]
-                md:text-[64px]
-              "
-              variants={aparecerArriba}
-            >
-              Un recuerdo para siempre
-            </motion.p>
 
             {/* Comillas */}
 

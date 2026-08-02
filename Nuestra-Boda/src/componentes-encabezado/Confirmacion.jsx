@@ -9,7 +9,6 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 const DATOS_CONFIRMACION = {
   festejada: "Dayana Nava Meléndez",
-  fechaLimite: "5 de septiembre de 2026",
 
   scriptUrl:
     "https://script.google.com/macros/s/AKfycbxklU9PTlqxkcu9pBUfWYhByQZ_7kJWuFENeeQhlEW-C6eh2cVbTK3z2AbMJiWVL1ME/exec",
@@ -512,26 +511,6 @@ const Confirmacion = () => {
             Confirma tu asistencia
           </h2>
 
-          <p
-            className="
-              mx-auto
-              mt-5
-              max-w-xl
-              font-playfair
-              text-[15px]
-              leading-relaxed
-              text-[#1F1F1F]/75
-              sm:text-[17px]
-            "
-          >
-            Tu presencia hará este día todavía
-            más especial. Por favor, registra tu
-            respuesta antes del{" "}
-            <strong className="font-semibold text-[#1F1F1F]">
-              {DATOS_CONFIRMACION.fechaLimite}
-            </strong>
-            .
-          </p>
         </motion.div>
 
         {/* ===============================================
