@@ -24,7 +24,7 @@ const DATOS_LUGARES = {
 
     // Movimiento de la imagen
     posicionDesktop: "center 50%",
-    posicionMobile: "center 50%",
+    posicionMobile: "90% 50%",
   },
 
   salon: {

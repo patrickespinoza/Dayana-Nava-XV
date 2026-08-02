@@ -11,7 +11,7 @@ const DATOS_CONFIRMACION = {
   festejada: "Dayana Nava Meléndez",
 
   scriptUrl:
-    "https://script.google.com/macros/s/AKfycbxklU9PTlqxkcu9pBUfWYhByQZ_7kJWuFENeeQhlEW-C6eh2cVbTK3z2AbMJiWVL1ME/exec",
+    "https://script.google.com/macros/s/AKfycbwym5jvYkCS6c2okn70SHxNrwvkf-QX9vQsF9qYAlH6YlEer8nFRtgHOmjzPo0m_KEtRQ/exec",
 };
 
 /* =====================================================
