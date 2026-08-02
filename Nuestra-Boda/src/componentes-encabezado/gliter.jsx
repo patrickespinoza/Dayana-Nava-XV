@@ -33,18 +33,21 @@ const GlitterIntro = () => {
             width: particula.size,
             height: particula.size,
             opacity: particula.opacity,
+
             background: `
               radial-gradient(
                 circle,
-                #fffdf2 0%,
-                #f4df9b 35%,
-                #d5b76a 65%,
+                #ffffff 0%,
+                #f9e3eb 35%,
+                #D99AB1 68%,
                 transparent 100%
               )
             `,
+
             boxShadow: `
-              0 0 8px rgba(255,245,205,0.75),
-              0 0 14px rgba(213,183,106,0.45)
+              0 0 10px rgba(255,255,255,0.75),
+              0 0 18px rgba(217,154,177,0.75),
+              0 0 28px rgba(217,154,177,0.45)
             `,
           }}
           animate={{
