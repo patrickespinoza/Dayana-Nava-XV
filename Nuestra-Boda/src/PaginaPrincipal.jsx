@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import Carousel from "./componentes-encabezado/carrusel";
 import { motion, AnimatePresence } from "framer-motion";
 import Itinerario from "./Itinerario";
-import Preguntas from "./Preguntas";
 import Confirmacion from "./componentes-encabezado/Confirmacion";
 import EventoDireccion from "./componentes-encabezado/Ubicacion";
 import DressCodePremium from "./componentes-encabezado/codigovestimenta";
 import FrasePersonalizada from "./componentes-encabezado/FrasePer";
 import LugaresYFamilia from "./componentes-encabezado/Agradecimiento";
-import LluviaDeSobres from "../../../Downloads/LluviaDeSobres";
+import LluviaDeSobres from "./componentes-encabezado/LluviadeSobres";
 
 
 export default function PaginaPrincipal() {
