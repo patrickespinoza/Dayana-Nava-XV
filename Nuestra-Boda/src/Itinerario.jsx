@@ -84,7 +84,7 @@ const EVENTOS = [
   },
   {
     hora: "00:00 Hrs",
-    titulo: "Fin",
+    titulo: "Fin de la celabracion",
     descripcion:
       "Cerraremos esta hermosa celebración.",
     simbolo: "✧",
