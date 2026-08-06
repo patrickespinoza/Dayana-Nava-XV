@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 const DATOS_LLUVIA_SOBRES = {
   titulo: "Lluvia de sobres",
   mensaje:
-    "Tu presencia es nuestro mejor regalo. Si además deseas tener un detalle con nosotros, agradecemos de corazón tu obsequio en efectivo mediante la tradicional lluvia de sobres. El día del evento encontrarás sobres disponibles para depositar tu regalo.",
+    "Tu presencia es nuestro mejor regalo. Si además deseas tener un detalle con nosotros, agradecemos de corazón tu obsequio en efectivo mediante la tradicional lluvia de sobres. El día del evento encontrarás sobres disponibles para colocarlo dentro.",
 };
 
 /* =====================================================
