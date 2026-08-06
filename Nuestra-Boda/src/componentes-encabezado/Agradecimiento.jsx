@@ -711,7 +711,7 @@ const LugaresYFamilia = () => {
                   sm:text-[11px]
                 "
               >
-                Mi madrina
+                Mi querida madrina
               </p>
 
               <p
