@@ -62,7 +62,7 @@ const EVENTOS = [
     hora: "20:30 Hrs",
     titulo: "Grupo musical",
     descripcion:
-      "Para comenzar a bailar y disfrutar de la celebración.",
+      "Para comenzar a bailar y disfrutar de la celebración, prepara tus botas y sombrero",
     simbolo: "✧",
     variante: "azul",
   },

@@ -642,7 +642,7 @@ const LugaresYFamilia = () => {
                   sm:text-[11px]
                 "
               >
-                Mi mamá
+                Mi amada madre
               </p>
 
               <p
